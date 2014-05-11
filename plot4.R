@@ -22,8 +22,8 @@ plot4     <- function(){
   
   #Plot2
   plot(xData, data[,6], type = "l", xlab = "", ylab = "Energy sub metering")
-  points(xData, data[,7], type = "l", col = "red")
-  points(xData, data[,8], type = "l", col = "blue")
+  lines(xData, data[,7], type = "l", col = "red")
+  lines(xData, data[,8], type = "l", col = "blue")
   legend("topright",
          c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
          lty = c(1,1), 

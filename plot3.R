@@ -11,8 +11,8 @@ plot3     <- function(){
   xData   <- as.POSIXlt(xData, format = "%d/%m/%Y %H:%M:%S")
   png(file = "plot3.png", bg = "transparent")    # default PNG 480 x 480
   plot(xData, data[,3], type = "l", xlab = "", ylab = "Energy sub metering")
-  points(xData, data[,4], type = "l", col = "red")
-  points(xData, data[,5], type = "l", col = "blue")
+  lines(xData, data[,4], type = "l", col = "red")
+  lines(xData, data[,5], type = "l", col = "blue")
   legend("topright",
          c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
          lty=c(1,1), 
